@@ -1,0 +1,10 @@
+server:
+  port: 8761
+eureka:
+  instance:
+    # 指定profiles=peer1时，主机名为peer1
+    hostname: peer1
+  client:
+      service-url:
+        # 互相注册，注册到peer2上去实现eureka高可用
+        defaultZone: http://peer2:8762/eureka/
