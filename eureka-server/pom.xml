@@ -6,11 +6,11 @@
         <groupId>com.dewi</groupId>
         <artifactId>eurekademo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.dewi</groupId>
+
     <artifactId>server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
     <name>server</name>
     <packaging>jar</packaging>
     <description>Demo project for Spring Boot</description>
@@ -60,14 +60,6 @@
             </exclusions>
         </dependency>
     </dependencies>
-
-    <repositories>
-        <repository>
-            <id>nexus-aliyun</id>
-            <name>Nexus aliyun</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
-        </repository>
-    </repositories>
 
     <build>
         <plugins>

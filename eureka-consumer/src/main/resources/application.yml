@@ -1,5 +1,27 @@
 server:
-  port: 8081
+  port: 8090
 spring:
   application:
     name: eureka-consumer
+eureka:
+  instance:
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://peer1:8761/eureka/, http://peer2:8762/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /monitor
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
