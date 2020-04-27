@@ -3,3 +3,4 @@ spring:
     name: spring-cloud-config-client
 server:
   port: 9001
+

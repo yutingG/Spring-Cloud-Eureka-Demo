@@ -1,7 +1,13 @@
 spring:
   cloud:
-    config:
-      name: neo-application
-      profile: dev
-      uri: http://localhost:9000/
-      label: master
+      config:
+        label: master
+        name: neo-application
+        profile: dev
+        discovery:
+          enabled: true
+          service-id: server-config
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka, http://peer2:8762/eureka

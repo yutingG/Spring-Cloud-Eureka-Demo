@@ -9,5 +9,9 @@ spring:
         git:
           uri: https://github.com/yutingG/config-repo
           search-paths: config-repo
-          username: # github账号
-          password: # GitHub密码
+          username: # github.name
+          password: # github.pwd
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka, http://peer2:8762/eureka
