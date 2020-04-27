@@ -1,6 +1,16 @@
 spring:
   application:
     name: spring-cloud-config-client
+  cloud:
+    bus:
+      trace:
+        enabled: true
+  rabbitmq:
+    addresses: localhost
+    port: 5672
+    username: admin
+    password: 123456
 server:
   port: 9001
+# 添加rabbitMq相关配置
 

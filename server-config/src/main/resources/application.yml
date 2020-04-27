@@ -9,8 +9,13 @@ spring:
         git:
           uri: https://github.com/yutingG/config-repo
           search-paths: config-repo
-          username: # github.name
-          password: # github.pwd
+          username: #
+          password: #
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: 123456
 eureka:
   client:
     service-url:
