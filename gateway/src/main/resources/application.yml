@@ -1,0 +1,29 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          # 开启通过服务中心的自动根据 serviceId 创建路由的功能
+          enabled: true
+          lower-case-service-id: true
+#      routes:
+#      # 自定义路由ID，保持唯一
+#      - id: gyt_route
+#        # 转发目标地址
+#        uri: http://www.ityouknow.com
+#        #路由条件
+#        predicates:
+#        - Path=/spring-cloud
+  application:
+    name: gateway-eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/, http://peer2:8762/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
