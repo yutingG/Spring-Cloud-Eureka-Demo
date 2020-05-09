@@ -18,7 +18,6 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Finchley.SR1</spring-cloud.version>
     </properties>
 
     <modules>
@@ -29,16 +28,15 @@
         <module>config-client</module>
         <module>gateway-zuul</module>
         <module>gateway</module>
+        <module>zipkin-server</module>
     </modules>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter</artifactId>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
 
     <repositories>
         <repository>

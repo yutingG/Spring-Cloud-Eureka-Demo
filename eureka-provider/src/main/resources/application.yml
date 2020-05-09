@@ -13,7 +13,13 @@ spring:
     username: root
     password: root
   profiles:
-    active: pro1
+    active: pro2
+  # 链路跟踪
+  zipkin:
+    base-url: http://localhost:5000
+  sleuth:
+    sampler:
+      percentage: 1.0
 logging:
   level:
     root: info
@@ -23,6 +29,7 @@ eureka:
       defaultZone: http://peer1:8761/eureka/, http://peer2:8762/eureka/
   instance:
     prefer-ip-address: true
+
 
 
 
