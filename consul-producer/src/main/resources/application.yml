@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: consul-producer
+  cloud:
+    consul:
+      # consul注册中心的host
+      host: 11.153.51.109
+      port: 8500
+      discovery:
+        # 注册到consul的服务名，后期客户端根据该名字来进行服务调用
+        service-name: consul-producer
+        register: true
+        prefer-ip-address: true
+server:
+  port: 8502

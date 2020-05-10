@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: consul-consumer
+  cloud:
+    consul:
+      discovery:
+        prefer-ip-address: true
+        # 不注册到consul
+        register: false
+      # consul注册中心的host
+      host: 11.153.51.109
+      port: 8500
+
+server:
+  port: 8600

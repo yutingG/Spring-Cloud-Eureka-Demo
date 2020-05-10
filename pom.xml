@@ -29,6 +29,7 @@
         <module>gateway-zuul</module>
         <module>gateway</module>
         <module>zipkin-server</module>
+        <module>consul-producer</module>
     </modules>
 
     <dependencies>

@@ -6,7 +6,9 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://peer1:8761/eureka/, http://peer2:8762/eureka/
+#      defaultZone: http://peer1:8761/eureka/, http://peer2:8762/eureka/
+      # windows机子
+      defaultZone: http://11.153.51.109:8761/eureka/, http://11.153.51.109:8762/eureka/
 management:
   metrics:
     web:
